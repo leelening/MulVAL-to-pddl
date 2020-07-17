@@ -1,0 +1,17 @@
+1,"execCode('10.10.10.1',someUser)","OR",0
+2,"RULE 2 (remote exploit of a server program)","AND",0
+3,"netAccess('10.10.10.1',tcp,'22')","OR",0
+4,"RULE 6 (direct network access)","AND",0
+5,"hacl(internet,'10.10.10.1',tcp,'22')","LEAF",1
+6,"attackerLocated(internet)","LEAF",1
+7,"networkServiceInfo('10.10.10.1',openssh,tcp,'22',someUser)","LEAF",1
+8,"vulExists('10.10.10.1','CVE-2008-5161',openssh,remoteExploit,privEscalation)","LEAF",1
+9,"execCode('10.10.10.14',someUser)","OR",0
+10,"RULE 2 (remote exploit of a server program)","AND",0
+11,"netAccess('10.10.10.14',tcp,'25')","OR",0
+12,"RULE 5 (multi-hop access)","AND",0
+13,"hacl('10.10.10.1','10.10.10.14',tcp,'25')","LEAF",1
+14,"RULE 6 (direct network access)","AND",0
+15,"hacl(internet,'10.10.10.14',tcp,'25')","LEAF",1
+16,"networkServiceInfo('10.10.10.14',openssl,tcp,'25',someUser)","LEAF",1
+17,"vulExists('10.10.10.14','CVE-2016-0800',openssl,remoteExploit,privEscalation)","LEAF",1
