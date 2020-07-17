@@ -4,7 +4,7 @@ import pandas
 if __name__ == '__main__':
     lines = list()
     lines.append('(define(problem pb1)\n')
-    lines.append('  (:domain attack-graph)\n')
+    lines.append('  (:domain attack_graph)\n')
     lines.append('(:objects s)\n\n')
 
     vertices = pandas.read_csv('VERTICES.CSV', header=None)

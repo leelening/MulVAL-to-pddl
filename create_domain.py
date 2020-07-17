@@ -6,7 +6,7 @@ import collections
 if __name__ == '__main__':
 
     lines = list()
-    lines.append('(define(domain attack-graph)\n')
+    lines.append('(define(domain attack_graph)\n')
     lines.append('    (:requirements :strips)\n\n')
 
     vertices = pandas.read_csv('VERTICES.CSV', header=None)
