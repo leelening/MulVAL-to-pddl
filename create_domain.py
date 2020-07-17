@@ -1,6 +1,7 @@
 import pandas
 from common import *
 import collections
+import sys
 
 
 if __name__ == '__main__':
@@ -9,8 +10,11 @@ if __name__ == '__main__':
     lines.append('(define(domain attack_graph)\n')
     lines.append('    (:requirements :strips)\n\n')
 
-    vertices = pandas.read_csv('VERTICES.CSV', header=None)
-    arcs = pandas.read_csv('ARCS.CSV', header=None)
+    vertices_file = sys.argv[1]
+    arcs_file = sys.argv[2]
+
+    vertices = pandas.read_csv(vertices_file, header=None)
+    arcs = pandas.read_csv(arcs_file, header=None)
     arcs = arcs.iloc[:, 0:2].values.tolist()
     arcs = list(tuple(x) for x in arcs)
 

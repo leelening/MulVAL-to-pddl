@@ -1,5 +1,6 @@
 from common import *
 import pandas
+import sys
 
 if __name__ == '__main__':
     lines = list()
@@ -7,7 +8,9 @@ if __name__ == '__main__':
     lines.append('  (:domain attack_graph)\n')
     lines.append('(:objects s)\n\n')
 
-    vertices = pandas.read_csv('VERTICES.CSV', header=None)
+    vertices_file = sys.argv[1]
+
+    vertices = pandas.read_csv(vertices_file, header=None)
     classified_vertices = {'AND': set(), 'OR': set(), 'LEAF': set()}
 
     # classify the nodes
