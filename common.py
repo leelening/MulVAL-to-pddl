@@ -15,6 +15,7 @@ def format_string(string):
     string = string.replace('__', '_')
     string = string.replace('__', '_')
     string = string.rstrip('_')
+    string = string.lower()
     return string
 
 
