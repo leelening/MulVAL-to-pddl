@@ -41,12 +41,12 @@ We provide an running example in the package. You can find AttackGraph.dot, ARCS
 
 You can create a domain file **domain.pddl** by running the following command.
 ```
-python create_domain.py
+python create_domain.py ./example/VERTICES.CSV ./example/ARCS.CSV
 ```
 
 Then you can create a problem file **problem.pddl** by running the following command.
 ```
-python create_problem.py
+python create_problem.py ./example/VERTICES.CSV
 ```
 
 Once you get these two files: **domain.pddl** and **problem.pddl**. You can go to [PDDL Editor](http://editor.planning.domains/) to solve your planning problem. This online editor has many good features.
