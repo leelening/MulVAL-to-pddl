@@ -26,7 +26,7 @@ if __name__ == '__main__':
     lines.append(temp)
     lines.append('\n)\n\n')
 
-    # in order to have all the transtions, we need all OR nodes to be true
+    # in order to have all the transitions, we need all OR nodes to be true
     lines.append('(:goal (and\n')
     temp = str()
     for v in classified_vertices['OR']:
