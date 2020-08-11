@@ -46,7 +46,7 @@ python create_domain.py ./example/VERTICES.CSV ./example/ARCS.CSV
 
 Then you can create a problem file **problem.pddl** by running the following command.
 ```
-python create_problem.py ./example/VERTICES.CSV
+python create_prob.py ./example/VERTICES.CSV
 ```
 
 Once you get these two files: **domain.pddl** and **problem.pddl**. You can go to [PDDL Editor](http://editor.planning.domains/) to solve your planning problem. This online editor has many good features.
